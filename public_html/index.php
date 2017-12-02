@@ -8,7 +8,7 @@
  $login_id = $_POST['login_id'];
  $login_password = $_POST['login_password'];
  if (LOGIN_ID != $login_id) {
-     header('Location: login.php');
+     header('Location: login.php?error_message=login id_password');
      exit();
      }
  if (! password_verify($login_password, LOGIN_PASSWORD)) {
